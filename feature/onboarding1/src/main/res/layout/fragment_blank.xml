@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Primary">
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@drawable/splash_border_radius_top">
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="200dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/splash_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:contentDescription="TODO" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_a_tasy_dish"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/img"
+                    android:textColor="@color/Primary_Font"
+                    android:textSize="22sp"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/title" />
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="@string/order_anything_you_want_from_your_favorite_restaurant"
+                    android:layout_below="@id/title"
+                    android:textColor="@color/Secondary"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:id="@+id/body"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:layout_below="@id/body"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/dot_yl" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/dot" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="0dp"
+                        android:src="@drawable/dot" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_below="@id/top"
+                android:background="@color/Main_BG"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/boder_radius">
+                    <TextView
+                        android:id="@+id/btnnext"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="240dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/border_btn_radius"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textColor="@color/Primary_Font"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/btnskip"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toRightOf="@id/btnnext"
+                        android:gravity="center"
+                        android:text="Skip"
+                        android:textColor="@color/Primary_Font"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

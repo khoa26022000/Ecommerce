@@ -1,5 +1,7 @@
 package com.example.ecommerce.ui
 
-class MainApplication {
+import android.app.Application
+
+class MainApplication : Application() {
 
 }

@@ -22,7 +22,10 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/card" />
             <option value="$PROJECT_DIR$/feature/login" />
+            <option value="$PROJECT_DIR$/feature/login1" />
             <option value="$PROJECT_DIR$/feature/login_1" />
+            <option value="$PROJECT_DIR$/feature/onboarding" />
+            <option value="$PROJECT_DIR$/feature/onboarding1" />
           </set>
         </option>
       </GradleProjectSettings>

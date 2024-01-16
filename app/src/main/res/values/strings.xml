@@ -2,4 +2,8 @@
     <string name="app_name">Ecommerce</string>
     <string name="title_feature">Module Title</string>
     <string name="title_core">Module Title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello KHOA aaaa</string>
+    <string name="hello">loading...</string>
+<!--    <string name="text_load">loading...</string>-->
 </resources>
