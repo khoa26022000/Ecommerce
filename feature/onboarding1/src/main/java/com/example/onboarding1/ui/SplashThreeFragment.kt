@@ -7,10 +7,7 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDeepLinkRequest
-import androidx.navigation.NavDestination
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.example.onboarding1.R
 import com.example.onboarding1.databinding.FragmentSplashThreeBinding
 
 /**
@@ -40,8 +37,6 @@ class SplashThreeFragment : Fragment() {
             val uri = "ecommerce-app://ecommerce/login/"
             val deeplink = NavDeepLinkRequest.Builder.fromUri(uri.toUri()).build()
             findNavController().navigate(deeplink)
-//            findNavController().navigate(com.example.login1.R.id.nav_login)
-
         }
     }
 

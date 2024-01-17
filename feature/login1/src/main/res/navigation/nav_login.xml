@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.login1.LoginFragment"
+        android:name="com.example.login1.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <deepLink

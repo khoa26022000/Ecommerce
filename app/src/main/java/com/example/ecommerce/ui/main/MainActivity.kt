@@ -11,6 +11,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.ecommerce.R
 import com.example.ecommerce.common.extensions.safeDeepLinkNavigate
 import com.example.ecommerce.databinding.ActivityMainBinding
+import com.example.ecommerce.service.QuoteApi
+import com.example.ecommerce.service.RetrofitHelper
+import retrofit2.create
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
@@ -22,6 +27,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val quotesApi = RetrofitHelper.getInstance().create(QuoteApi::class.java)
+        GlobalScope.launch {
+            val result = quotesApi.getQuotes()
+            Log.d("KHOA LOG result", "$result")
+            if (result != null)
+            // Checking the results
+                Log.d("ayush: ", result.body().toString())
+        }
     }
 
     override fun onResume() {

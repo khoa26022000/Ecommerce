@@ -3,12 +3,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".ui.LoginFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/login">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-29dp"
+            android:background="@color/Primary">
+            <RelativeLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/Main_BG">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/button_right_radius">
+
+                    <TextView
+                        android:id="@+id/textlog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Login"
+                        android:textColor="@color/Primary_Font"
+                        android:textSize="25sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textlog"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Access account"
+                        android:textColor="@color/Primary_Font"
+                        android:textSize="18sp"></TextView>
+                </RelativeLayout>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top"
+                android:background="@drawable/left_top_radius">
+                <RelativeLayout
+                    android:id="@+id/btngg"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="49dp"
+                    android:background="@drawable/border_btn_radius"
+                    android:textColor="@color/Primary_Font"
+                    android:textSize="17sp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/gg"></ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btnfb"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="49dp"
+                    android:layout_toRightOf="@+id/btngg"
+                    android:background="@drawable/border_btn_radius"
+                    android:textColor="@color/Primary_Font">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/fb"></ImageView>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnfb"
+                    android:layout_marginLeft="54sp"
+                    android:layout_marginTop="15sp"
+                    android:text="Email"
+                    android:textColor="@color/Primary_Font"
+                    android:textSize="18dp"></TextView>
+
+                <EditText
+                    android:id="@+id/inputemail"
+                    android:layout_width="300dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/textemail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_btn_radius"
+                    android:hint="sample@email.com"
+                    android:padding="15dp"
+                    android:textColor="@color/Primary_Font"
+                    android:textColorHint="@color/hint">
+
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputemail"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Password"
+                    android:textColor="@color/Primary_Font"
+                    android:textSize="18dp"></TextView>
+
+                <EditText
+                    android:id="@+id/inputPass"
+                    android:layout_width="300dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/textpass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_btn_radius"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="15dp"
+                    android:textColor="@color/Primary_Font"
+                    android:textColorHint="@color/hint"></EditText>
+
+                <Button
+                    android:id="@+id/signin"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/inputPass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_yellow"
+                    android:text="Sign in">
+
+                </Button>
+
+                <TextView
+                    android:id="@+id/res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="Don’t have an account?  Register"
+                    android:textColor="@color/Primary_Font"
+                    android:textSize="18dp">
+
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
