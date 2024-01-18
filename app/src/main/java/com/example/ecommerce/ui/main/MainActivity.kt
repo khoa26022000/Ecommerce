@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val quotesApi = RetrofitHelper.getInstance().create(QuoteApi::class.java)
-        GlobalScope.launch {
-            val result = quotesApi.getQuotes()
-            Log.d("KHOA LOG result", "$result")
-            if (result != null)
-            // Checking the results
-                Log.d("ayush: ", result.body().toString())
-        }
+//        val quotesApi = RetrofitHelper.getInstance().create(QuoteApi::class.java)
+//        GlobalScope.launch {
+//            val result = quotesApi.getQuotes()
+//            Log.d("KHOA LOG result", "$result")
+//            if (result != null)
+//            // Checking the results
+//                Log.d("ayush: ", result.body().toString())
+//        }
     }
 
     override fun onResume() {

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    android:background="@color/Primary"
+                    >
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="55dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="66dp"
+                        android:text="FOOD APP"
+                        android:textAlignment="center"
+                        android:textColor="@color/Primary_Font"
+                        android:textSize="45dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="170dp"
+                    android:background="@drawable/border_radius_home_topleft"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingBottom="15dp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/layoutaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:id="@+id/icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp"
+                                android:src="@drawable/ic_adrress" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/icon"
+                                android:text="Home"
+                                android:textColor="@color/Primary_Font"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title"
+                                android:layout_toRightOf="@+id/icon"
+                                android:text="The Hallmark, Quận 2, HCM City"
+                                android:textColor="@color/Primary_Font"/>
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ticket"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@id/layoutaddress"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:background="@drawable/border_btn_radius"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="COLLECTION POINTS"
+                                android:textSize="18dp"
+                                android:textColor="@color/Primary_Font"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mỗi lần đặt 10 đơn, nhận 2 mã 25k"
+                                android:textSize="15dp"
+                                android:textColor="@color/Primary_Font"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp">
+                                <ProgressBar
+                                    android:id="@+id/progressPoint"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:progressDrawable="@drawable/custom_progress"/>
+                                <TextView
+                                    android:id="@+id/userPoint"
+                                    android:layout_toRightOf="@+id/progressPoint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/Primary"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    android:text="0"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerVertical="true"
+                                    />
+                                <TextView
+                                    android:id="@+id/totalPoint"
+                                    android:layout_toRightOf="@+id/userPoint"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:textStyle="bold"
+                                    android:text="/10"
+                                    android:layout_centerVertical="true"
+                                    />
+
+                                <Button
+                                    android:id="@+id/btnGetTicket"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_toRightOf="@+id/totalPoint"
+                                    android:background="@drawable/button_yellow"
+                                    android:text="Nhận" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/list1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ticket"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Beverage"
+                            android:textSize="18dp"
+                            android:textColor="@color/Primary_Font"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/beverage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/list2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/list1"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Burger"
+                            android:textSize="18dp"
+                            android:textColor="@color/Primary_Font"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/burge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/list3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/list2"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gà Rán"
+                            android:textSize="18dp"
+                            android:textColor="@color/Primary_Font"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/chicken"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/list4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/list3"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Spaghetti"
+                            android:textSize="18dp"
+                            android:textColor="@color/Primary_Font"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/spaghetti"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

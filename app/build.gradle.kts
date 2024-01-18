@@ -45,6 +45,7 @@ dependencies {
 
     implementation(project(mapOf("path" to ":feature:onboarding1")))
     implementation(project(mapOf("path" to ":feature:login1")))
+    implementation(project(mapOf("path" to ":feature:home")))
     implementation(project(mapOf("path" to ":core:common")))
 //    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

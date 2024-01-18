@@ -12,5 +12,18 @@
         tools:layout="@layout/fragment_login">
         <deepLink
             app:uri="ecommerce-app://ecommerce/login/" />
+        <action
+            android:id="@+id/loginFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+<!--        <action-->
+<!--            android:id="@+id/actionNavigateLogin"-->
+<!--            app:popUpTo="@+id/homeFragment" />-->
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.login1.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>
