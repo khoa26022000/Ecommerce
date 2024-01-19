@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDeepLinkRequest
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.login1.R
 import com.example.login1.databinding.FragmentLoginBinding
@@ -69,8 +70,9 @@ class LoginFragment : Fragment() {
                 ) {
                     if (response.isSuccessful) {
                         val uri = "ecommerce-app://ecommerce/home/"
+                        val NavOptions = NavOptions.Builder().setPopUpTo(R.id.nav_login,true).setLaunchSingleTop(true).build()
                         val deeplink = NavDeepLinkRequest.Builder.fromUri(uri.toUri()).build()
-                        findNavController().navigate(deeplink)
+                        findNavController().navigate(deeplink, NavOptions)
                         Toast.makeText(context, "Login success", Toast.LENGTH_SHORT).show()
                     } else{
                         Toast.makeText(context, "Login failure", Toast.LENGTH_LONG).show()
